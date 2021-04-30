@@ -1,5 +1,10 @@
 (function ($) {
     $(document).ready(function () {
+        $('#sidebar-menu ul li ul li.ok').parent('ul').slideDown();
+        $('#sidebar-menu ul li ul li.ok a').css('color', '#20e3ff');
+        $('#sidebar-menu ul li ul li.ok').parent('ul').parent('li').children('a').css('background-color', '#19c1dc');
+        $('#sidebar-menu ul li ul li.ok').parent('ul').parent('li').children('a').addClass('subdrop');
+
         /**
          * Logout Button
          */
@@ -430,6 +435,109 @@
             let file_url = URL.createObjectURL(e.target.files[0]);
             $('img#topser_piture8_load').attr('src', file_url);
         });
+
+
+        /**
+         * About Message Image Load
+         */
+         $(document).on('change', '#message_photo', function (e) {
+            e.preventDefault();
+            let file_url = URL.createObjectURL(e.target.files[0]);
+            $('img#message_photo_load').attr('src', file_url);
+         });
+        
+        /**
+        * About Message Switcher
+        */
+         $(document).on('change', '.amessage_switcher', function (e) {
+            e.preventDefault();
+            let status_id = $(this).attr('status_id');
+            $.ajax({
+                url: '/about-vice-status-update/' + status_id,
+                success: function (data) {
+                    swal('Message status updated Successfull!');
+                }
+            });
+         });
+        
+        /**
+         * About Message Edit
+         */
+         $(document).on('click', '.edit_message', function (e) {
+            e.preventDefault();
+            let edit_id = $(this).attr('edit_id');
+
+            $.ajax({
+                url: 'about-vice/' + edit_id + '/edit',
+                success: function (data) {
+                    $('#update_message_modal form input[name="id"]').val(data.id);
+                    $('#update_message_modal form input[name="name"]').val(data.name);
+                    $('#update_message_modal form textarea[name="content"]').text(data.content);
+                    $('#update_message_modal img#message_new_photo_load').attr('src', 'media/message/' + data.photo);
+                    $('#update_message_modal').modal('show');
+                }
+            });
+         });
+        
+        /**
+         * About Message Update Image Load
+         */
+         $(document).on('change', '#message_new_photo', function (e) {
+            e.preventDefault();
+            let file_url = URL.createObjectURL(e.target.files[0]);
+            $('img#message_new_photo_load').attr('src', file_url);
+         });
+        
+        /**
+         * About Management Image Load
+         */
+         $(document).on('change', '#management_photo', function (e) {
+            e.preventDefault();
+            let file_url = URL.createObjectURL(e.target.files[0]);
+            $('img#management_photo_load').attr('src', file_url);
+         });
+        
+        /**
+        * About Management Switcher
+        */
+         $(document).on('change', '.amanagement_switcher', function (e) {
+            e.preventDefault();
+            let status_id = $(this).attr('status_id');
+            $.ajax({
+                url: '/about-management-status-update/' + status_id,
+                success: function (data) {
+                    swal('Management status updated Successfull!');
+                }
+            });
+         }); 
+        
+        /**
+         * About Management Edit
+         */
+         $(document).on('click', '.edit_management', function (e) {
+            e.preventDefault();
+            let edit_id = $(this).attr('edit_id');
+
+            $.ajax({
+                url: 'about-management/' + edit_id + '/edit',
+                success: function (data) {
+                    $('#update_member_modal form input[name="id"]').val(data.id);
+                    $('#update_member_modal form input[name="name"]').val(data.name);
+                    $('#update_member_modal form input[name="job"]').val(data.job);
+                    $('#update_member_modal img#management_new_photo_load').attr('src', 'media/top_management/' + data.photo);
+                    $('#update_member_modal').modal('show');
+                }
+            });
+         });
+        
+        /**
+         * About Management Update Image Load
+         */
+         $(document).on('change', '#management_new_photo', function (e) {
+            e.preventDefault();
+            let file_url = URL.createObjectURL(e.target.files[0]);
+            $('img#management_new_photo_load').attr('src', file_url);
+         });
 
 
     });

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutUs;
 use App\Models\Client;
 use App\Models\Slider;
 use App\Models\Gallery;
@@ -11,6 +12,7 @@ use App\Models\Portfolio;
 use App\Models\OurService;
 use App\Models\Testimonial;
 use App\Models\ContactUs;
+use App\Models\TopManagement;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -73,7 +75,10 @@ class FrontendController extends Controller
      */
     public function showAboutUsPage()
     {
-        
+        $all_message        = AboutUs::all();
+        $all_management     = TopManagement::all();
+        $contactus          = ContactUs::find(1);
+        return view('frontend.about', compact('all_message', 'all_management', 'contactus'));
     }
 
     /**

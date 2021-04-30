@@ -95,6 +95,18 @@ Route::get('/contact', 'App\Http\Controllers\ContactUsController@showContactUS')
 Route::post('/contact', 'App\Http\Controllers\ContactUsController@insertContactUS')->name('contact.us');
 
 /**
+ * About Us
+ */
+Route::resource('/about-management', 'App\Http\Controllers\TopManagementController');
+Route::get('/about-management-status-update/{id}', 'App\Http\Controllers\TopManagementController@updateAboutManagementStatus')->name('about.management.status.update');
+
+Route::resource('/about-vice', 'App\Http\Controllers\AboutUsController');
+Route::get('/about-vice-status-update/{id}', 'App\Http\Controllers\AboutUsController@updateAboutViceStatus')->name('about.vice.status.update');
+
+Route::get('/about-text-message', 'App\Http\Controllers\TopManagementController@showAboutTextMessage')->name('about.text.message');
+Route::post('/about-text-message', 'App\Http\Controllers\TopManagementController@insertAboutTextMessage')->name('about.text.message');
+
+/**
  * Frontend
  */
 Route::get('/', 'App\Http\Controllers\FrontendController@homePage')->name('home.page');
