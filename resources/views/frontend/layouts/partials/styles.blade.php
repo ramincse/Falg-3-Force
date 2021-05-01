@@ -1,5 +1,4 @@
-    <!-- Favicon Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/favicon.png') }}">
+
     <!-- Animation CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/animate.css') }}">
     <!-- Latest Bootstrap min CSS -->

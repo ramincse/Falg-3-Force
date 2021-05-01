@@ -539,6 +539,20 @@
             $('img#management_new_photo_load').attr('src', file_url);
          });
 
+        
+        /**
+         * Logo Image Load
+         */
+         $(document).on('change', '#logo_photo', function (e) {
+            e.preventDefault();
+            let file_url = URL.createObjectURL(e.target.files[0]);
+            $('img#logo_photo_load').attr('src', file_url);
+         });
+         $(document).on('change', '#favicon_photo', function (e) {
+            e.preventDefault();
+            let file_url = URL.createObjectURL(e.target.files[0]);
+            $('img#favicon_photo_load').attr('src', file_url);
+         });
 
     });
 })(jQuery)

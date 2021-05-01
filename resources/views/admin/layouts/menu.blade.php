@@ -65,9 +65,7 @@
                         <a href="#"><i class="fe fe-vector"></i> <span> Settings </span> <span class="menu-arrow"></span></a>
                         <ul style="display: none;">
                             <li class="{{ (Route::currentRouteName() == 'slider.index') ? 'ok' : '' }}"><a href="{{ route('slider.index') }}"> Slider </a></li>
-                            <li><a href="register.html"> Register </a></li>
-                            <li><a href="forgot-password.html"> Forgot Password </a></li>
-                            <li><a href="lock-screen.html"> Lock Screen </a></li>
+                            <li class="{{ (Route::currentRouteName() == 'theme.setting') ? 'ok' : '' }}"><a href="{{ route('theme.setting') }}">Theme Option</a></li>
                         </ul>
                     </li>
                     <!-- <li class="submenu">

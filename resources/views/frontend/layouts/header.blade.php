@@ -16,12 +16,16 @@
             </div>
         </div>
     </div>
+
+    @php
+        $all_settings = App\Models\Setting::find(1);
+    @endphp
     <div class="bottom_header dark_skin main_menu_uppercase">
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.html">
-                    <img class="logo_light" src="{{ URL::to('/') }}/media/logo/F3FORCE-landscape.png" alt="logo" />
-                    <img class="logo_dark" src="{{ URL::to('/') }}/media/logo/F3FORCE-landscape.png" alt="logo" />
+                    <img class="logo_light" src="{{ URL::to('/') }}/media/settings/{{ $all_settings->logo }}" alt="logo" />
+                    <img class="logo_dark" src="{{ URL::to('/') }}/media/settings/{{ $all_settings->logo }}" alt="logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
                     <span class="ion-android-menu"></span>

@@ -107,6 +107,12 @@ Route::get('/about-text-message', 'App\Http\Controllers\TopManagementController@
 Route::post('/about-text-message', 'App\Http\Controllers\TopManagementController@insertAboutTextMessage')->name('about.text.message');
 
 /**
+ * Settings
+ */
+Route::get('/setting/theme', 'App\Http\Controllers\SettingController@showSettingLogo')->name('theme.setting');
+Route::post('/setting/theme', 'App\Http\Controllers\SettingController@insertSettingLogo')->name('theme.setting');
+
+/**
  * Frontend
  */
 Route::get('/', 'App\Http\Controllers\FrontendController@homePage')->name('home.page');

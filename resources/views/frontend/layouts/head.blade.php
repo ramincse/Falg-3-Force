@@ -7,6 +7,11 @@
     <meta name="keywords" content="ecommerce, electronics store, Fashion store, furniture store,  bootstrap 4, clean, minimal, modern, online store, responsive, retail, shopping, ecommerce store">
 
     <!-- SITE TITLE -->
-    <title>Flag 3 Force</title>
+    @php
+        $all_settings = App\Models\Setting::find(1);
+    @endphp
+    <title>{{ $all_settings->site_title }}</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ URL::to('/') }}/media/settings/{{ $all_settings->favicon }}">
 
     @include('frontend.layouts.partials.styles')

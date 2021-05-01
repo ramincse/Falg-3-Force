@@ -26,3 +26,5 @@
     <script src="{{ asset('frontend/assets/js/jquery.elevatezoom.js') }}"></script>
     <!-- scripts js -->
     <script src="{{ asset('frontend/assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('frontend/assets/js/flag3force/mixitup.min.js') }}"></script>
+    @yield('javascript')

@@ -93,17 +93,24 @@
                         </ul>
                     </div>
                 </div>
+
+                @php
+                    $all_settings = App\Models\Setting::find(1);
+                    $sister_arr = json_decode($all_settings->sister);
+                    $social_arr = json_decode($all_settings->social);
+                    $copy_arr = json_decode($all_settings->copyright);
+                @endphp
                 <div class="col-lg-2 col-md-6 col-sm-12">
                     <div class="widget">
-                        <h6 class="widget_title">Knock Our Sister Concern</h6>
+                        <h6 class="widget_title">{{ $sister_arr->sister }}</h6>
                         <ul class="app_list">
-                            <li><a href="https://eventforcebd.com/"><i class="ti-link"></i>www.eventforcebd.com</a></li>
+                            <li><a target="_blank" href="{{ $sister_arr->web_link }}"><i class="ti-link"></i>{{ $sister_arr->web_link }}</a></li>
                         </ul>
                         <h6 class="widget_title">Follow Us</h6>
                         <ul class="social_icons rounded_social">
-                            <li><a href="#" class="sc_facebook"><i class="ion-social-facebook"></i></a></li>
-                            <li><a href="#" class="sc_twitter"><i class="ion-social-twitter"></i></a></li>
-                            <li><a href="#" class="sc_youtube"><i class="ion-social-youtube-outline"></i></a></li>
+                            <li><a target="_blank" href="{{ $social_arr->facebook_link }}" class="sc_facebook"><i class="ion-social-facebook"></i></a></li>
+                            <li><a target="_blank" href="{{ $social_arr->twitter_link }}" class="sc_twitter"><i class="ion-social-twitter"></i></a></li>
+                            <li><a target="_blank" href="{{ $social_arr->youtube_link }}" class="sc_youtube"><i class="ion-social-youtube-outline"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -114,7 +121,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="mb-md-0 text-center text-md-left">© 2020 All Rights Reserved by Flag 3 Force</p>
+                    <p class="mb-md-0 text-center text-md-left">© {{ $copy_arr->copy_year }} All Rights Reserved by {{ $copy_arr->copy_by }}</p>
                 </div>
                 <div class="col-md-6">
                     <ul class="footer_payment text-center text-lg-right">
