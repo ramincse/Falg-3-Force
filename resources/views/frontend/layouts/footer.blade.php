@@ -37,7 +37,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-12">
                 @php
                     $contactus = App\Models\ContactUs::find(1);
                     $dhaka1_office = json_decode($contactus->dhaka1_office);
@@ -84,12 +84,12 @@
                     <div class="widget">
                         <h6 class="widget_title">Menu</h6>
                         <ul class="widget_links">
-                            <li><a href="{{ route('home.page') }}">Home</a></li>
-                            <li><a href="{{ route('about.page') }}">About Us</a></li>
-                            <li><a href="{{ route('service.page') }}">Our Services</a></li>
-                            <li><a href="{{ route('client.page') }}">Clients</a></li>
-                            <li><a href="{{ route('gallery.page') }}">Gallery</a></li>
-                            <li><a href="{{ route('contact.page') }}">Contact Us</a></li>
+                            <li><a class="text-uppercase" href="{{ route('home.page') }}">Home</a></li>
+                            <li><a class="text-uppercase" href="{{ route('about.page') }}">About Us</a></li>
+                            <li><a class="text-uppercase" href="{{ route('service.page') }}">Our Services</a></li>
+                            <li><a class="text-uppercase" href="{{ route('client.page') }}">Clients</a></li>
+                            <li><a class="text-uppercase" href="{{ route('gallery.page') }}">Gallery</a></li>
+                            <li><a class="text-uppercase" href="{{ route('contact.page') }}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,9 +100,15 @@
                     $social_arr = json_decode($all_settings->social);
                     $copy_arr = json_decode($all_settings->copyright);
                 @endphp
-                <div class="col-lg-2 col-md-6 col-sm-12">
+                <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="widget">
-                        <h6 class="widget_title">{{ $sister_arr->sister }}</h6>
+                        <h6 class="widget_title">{{ $sister_arr->sister }}</h6>                        
+                        <h6 style="font-size: 16px;" class="widget_title mb-2 text-uppercase">Event Management</h6>
+                        <!-- <p class="mb-2">{{ $sister_arr->event_manage }}</p> -->
+                        <ul class="app_list">
+                            <li><a target="_blank" href="{{ $sister_arr->web_link }}"><i class="ti-link"></i>{{ $sister_arr->web_link }}</a></li>
+                        </ul>
+                        <h6 style="font-size: 16px;" class="widget_title mt-3 mb-2 text-uppercase">Event Logistics</h6>
                         <ul class="app_list">
                             <li><a target="_blank" href="{{ $sister_arr->web_link }}"><i class="ti-link"></i>{{ $sister_arr->web_link }}</a></li>
                         </ul>

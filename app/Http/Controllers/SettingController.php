@@ -53,10 +53,18 @@ class SettingController extends Controller
         $social_json = json_encode($social_arr, JSON_UNESCAPED_SLASHES);
 
         $sister_arr = [
-            'sister' => $request->sister,
-            'web_link'   => $request->web_link,
+            'sister'         => $request->sister,
+            'web_link'       => $request->web_link,
+            'event_manage'   => $request->event_manage,
+            'event_logist'   => $request->event_logist,
         ];
         $sister_json = json_encode($sister_arr, JSON_UNESCAPED_SLASHES);
+
+        $hotline_arr = [
+            'cell_1'    => $request->cell_1,
+            'cell_2'    => $request->cell_2,
+        ];
+        $hotline_json = json_encode($hotline_arr, JSON_UNESCAPED_SLASHES);
         
         $update_setting ->site_title    = $request->site_title;
         $update_setting ->logo          = $logo_uname;
@@ -64,6 +72,7 @@ class SettingController extends Controller
         $update_setting ->copyright     = $copy_json;
         $update_setting ->social        = $social_json;
         $update_setting ->sister        = $sister_json;
+        $update_setting ->hotline       = $hotline_json;
         $update_setting ->update();
 
         return redirect()->route('theme.setting')->with('success', 'Data updated Successfull!');

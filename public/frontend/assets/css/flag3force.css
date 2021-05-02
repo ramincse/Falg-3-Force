@@ -1,0 +1,6 @@
+@font-face {
+    src: url('frontend/assets/fonts/flag3/Beaufort Extended.ttf');
+    font-family: beaufort;
+}
+
+h1, h2, h3, h4, h5 ,h6{ font-family: beaufort !important; text-transform: uppercase !important;}

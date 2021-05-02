@@ -116,23 +116,65 @@
                                             </div>   
                                             <div class="card-body">    
                                                 <div class="row">             
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label>Title</label>
                                                             <input name="sister" class="form-control" type="text" value="{{ $sister_arr->sister }}">
                                                         </div> 
                                                     </div>   
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-3">
                                                         <div class="form-group">
                                                             <label>Website Link</label>
                                                             <input name="web_link" class="form-control" type="text" value="{{ $sister_arr->web_link }}">
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label>Event Management</label>
+                                                            <input name="event_manage" class="form-control" type="text" value="{{ $sister_arr->event_manage }}">
+                                                        </div> 
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <label>Event Logistics</label>
+                                                            <input name="event_logist" class="form-control" type="text" value="{{ $sister_arr->event_logist }}">
                                                         </div> 
                                                     </div>
                                                 </div>  
                                             </div>
                                         </div>
                                     </div>
-                                </div>                                        
+                                </div>     
+
+                                <!-- Hotline Number -->
+                                @php
+                                $hotline_arr = json_decode($all_settings->hotline);
+                                @endphp
+                                <div class="row">  
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-header bg-secondary">
+                                                <h4 class="card-title">Hotline Number</h4>
+                                            </div>   
+                                            <div class="card-body">    
+                                                <div class="row">             
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Contact Number #1</label>
+                                                            <input name="cell_1" class="form-control" type="text" value="{{ $hotline_arr->cell_1 }}">
+                                                        </div> 
+                                                    </div>   
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Contact Number #2</label>
+                                                            <input name="cell_2" class="form-control" type="text" value="{{ $hotline_arr->cell_2 }}">
+                                                        </div> 
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                     
 
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-lg btn-primary">Save</button>

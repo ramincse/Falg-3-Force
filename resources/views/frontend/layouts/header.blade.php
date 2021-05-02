@@ -1,22 +1,4 @@
-<header class="header_wrap fixed-top header_with_topbar">
-    <div class="top-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                </div>
-                <div class="col-md-6">
-                    <div class="text-center text-md-right">
-                        <ul class="header_list">
-                            <li><span>Hotline:</span></li>
-                            <li><i class="fas fa-headset"></i><span>01675392075</span></li>
-                            <li><i class="fas fa-headset"></i><span>01983569800</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+<header class="header_wrap fixed-top header_with_topbar">   
     @php
         $all_settings = App\Models\Setting::find(1);
     @endphp
@@ -41,7 +23,15 @@
                     </ul>
                 </div>
                 <ul class="navbar-nav attr-nav align-items-center">
-
+                @php
+                $hotline_arr = json_decode($all_settings->hotline);
+                @endphp  
+                    <div>
+                        <h6 class="m-0" style="font-size: 14px; color: #333; text-transform: uppercase; text-align: center;">Hotline:</h4>
+                        <p class="mb-0" style="line-height: 18px;"><i style="margin-right: 6px; font-size: 14px; color: #333;" class="fas fa-headset"></i><span style="font-size: 14px; color: #333;">{{ $hotline_arr->cell_1 }}</span></p>
+                        <hr style="background: #333;" class="m-0">
+                        <p class="mb-0" style="line-height: 18px;"><i style="margin-right: 6px; font-size: 14px; color: #333;" class="fas fa-headset"></i><span style="font-size: 14px; color: #333;">{{ $hotline_arr->cell_2 }}</span></p>
+                    </div>
                 </ul>
             </nav>
         </div>

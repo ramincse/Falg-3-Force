@@ -84,7 +84,7 @@
 
 <!-- Add Security Service Modal -->
 <div id="add_fsservice_modal" class="modal fade">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Add new service</h4>
@@ -104,8 +104,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Content</label>
-                        <textarea name="content" class="form-control" id="">{{ old('content') }}</textarea>
+                        <label>Left Content</label>
+                        <textarea style="height: 200px;" name="content_1" class="form-control">{{ old('content_1') }}</textarea>
                     </div>
 
                     <div class="form-group">
@@ -121,6 +121,11 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Bottom Content</label>
+                        <textarea style="height: 200px;" name="content_2" class="form-control">{{ old('content_2') }}</textarea>
+                    </div>
+
+                    <div class="form-group">
                         <input class="btn btn-block btn-info" type="submit" value="Add service">
                     </div>
                 </form>
@@ -131,7 +136,7 @@
 
 <!-- Update Security Service Modal -->
 <div id="update_fsservice_modal" class="modal fade">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Update service</h4>
@@ -153,8 +158,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Content</label>
-                        <textarea name="content" class="form-control" id=""></textarea>
+                        <label>Left Content</label>
+                        <textarea style="height: 200px;" name="content_1" class="form-control"></textarea>
                     </div>
 
                     <div class="form-group">
@@ -162,11 +167,16 @@
                         <img style="width: 100%; height: 150px; border: 1px solid #ccc; border-radius: 4px; display: block;" src="" alt="" id="fsservice_new_photo_load">
                         <input style="display: none;" id="fsservice_new_photo" name="new_photo" class="form-control" type="file">
                         <label for="fsservice_new_photo"><img style="width: 60px; height: 60px; cursor: pointer;" src="{{ URL::to('/') }}/admin/icons/camera.jpg" alt=""></label>
-                    </div>
+                    </div>                    
 
                     <div class="form-group">
                         <label>Description</label>
                         <input name="photo_name" class="form-control" type="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bottom Content</label>
+                        <textarea style="height: 200px;" name="content_2" class="form-control"></textarea>
                     </div>
 
                     <div class="form-group">

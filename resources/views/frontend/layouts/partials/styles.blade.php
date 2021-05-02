@@ -24,4 +24,5 @@
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/slick-theme.css') }}">
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/assets/css/flag3force.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">

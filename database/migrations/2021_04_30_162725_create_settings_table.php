@@ -24,6 +24,7 @@ class CreateSettingsTable extends Migration
             $table->string('corporate_office')->nullable();
             $table->string('dhaka1_office')->nullable();
             $table->string('dhaka2_office')->nullable();
+            $table->string('hotline')->nullable();
             $table->timestamps();
         });
     }

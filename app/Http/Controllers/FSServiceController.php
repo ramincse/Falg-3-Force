@@ -38,7 +38,7 @@ class FSServiceController extends Controller
     {
         $this->validate($request, [
             'title'     => 'required',
-            'content'   => 'required',
+            'content_1' => 'required',
         ]);
 
         if ($request->hasFile('photo')) {
@@ -47,10 +47,16 @@ class FSServiceController extends Controller
             $img->move(public_path('media/fsservice'), $photo_uname);
         }
 
+        $content_arr = [
+            'content_1'    => $request->content_1,
+            'content_2'    => $request->content_2,
+        ];
+        $content_json = json_encode($content_arr, JSON_UNESCAPED_SLASHES);
+
         FSService::create([	 	 	 	
             'title'     => $request->title,
             'sub_title' => $request->sub_title,
-            'content'   => $request->content,
+            'content'   => $content_json,
             'photo'     => $photo_uname,
             'photo_name' => $request->photo_name,
         ]);
@@ -78,11 +84,14 @@ class FSServiceController extends Controller
     public function edit($id)
     {
         $edit_data = FSService::find($id);
+        $cont_josn = json_decode($edit_data->content);
+
         return [
             'id'        => $edit_data->id,
             'title'     => $edit_data->title,
             'sub_title' => $edit_data->sub_title,
-            'content'   => $edit_data->content,            
+            'content_1'   => $cont_josn->content_1,            
+            'content_2'   => $cont_josn->content_2,            
             'photo'     => $edit_data->photo,
             'photo_name' => $edit_data->photo_name,
         ];
@@ -108,9 +117,15 @@ class FSServiceController extends Controller
             $photo_uname = $update_data->photo;
         }
 
+        $content_arr = [
+            'content_1'    => $request->content_1,
+            'content_2'    => $request->content_2,
+        ];
+        $content_json = json_encode($content_arr, JSON_UNESCAPED_SLASHES);
+
         $update_data->title     = $request->title;
         $update_data->sub_title = $request->sub_title;
-        $update_data->content   = $request->content;
+        $update_data->content   = $content_json;
         $update_data->photo     = $photo_uname;
         $update_data->photo_name = $request->photo_name;
         $update_data->update();

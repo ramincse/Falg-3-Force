@@ -50,7 +50,7 @@
                                             <div class="owl-item cloned" style="width: 172.5px; margin-right: 30px;">
                                                 <div class="item">
                                                     <div class="categories_box">
-                                                        <a href="#">
+                                                        <a href="#" style="padding: 10px 20px;">
                                                             <img src="{{ URL::to('/') }}/media/portfolio/{{ $portfolio->photo }}" alt="">
                                                             <span style="height: 50px;">{{ $portfolio->title }}</span>
                                                         </a>
@@ -90,7 +90,7 @@
     </div>
     @endforeach
 
-    <!-- START SECTION BANNER Description -->
+    <!-- START SECTION FLAG 3 SECURITY SERVICES LTD -->
     @foreach($all_fsservices as $fsservices)
     <div class="section pb_20 small_pt">
         <div class="container">
@@ -102,15 +102,25 @@
                     <p class="text-center leads">{{ $fsservices->sub_title }}</p>
                 </div>
             </div>
+            @php
+            $cont_josn = json_decode($fsservices->content);
+            @endphp
             <div class="row">
-                <div class="col-md-7">
-                    <div class="single_banner">
-                        <p class="text-justify">{{ $fsservices->content }}</p>
+                <div class="col-md-8">
+                    <div class="single_banner mb-0">
+                        <p class="text-justify">{{ $cont_josn->content_1 }}</p>
                     </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <div class="single_banner">
-                        <img src="{{ URL::to('/') }}/media/fsservice/{{ $fsservices->photo }}" alt="furniture_banner1">
+                        <img style="width: 250px; height: 250px;" src="{{ URL::to('/') }}/media/fsservice/{{ $fsservices->photo }}" alt="furniture_banner1">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="single_banner">
+                        <p class="text-justify">{{ $cont_josn->content_2 }}</p>
                     </div>
                 </div>
             </div>
@@ -118,7 +128,7 @@
     </div>
     @endforeach
 
-    <!-- START SECTION Service LOGO -->
+    <!-- START SECTION Testimonial -->
     <div class="section small_pt">
         <div class="container">
             <div class="row">

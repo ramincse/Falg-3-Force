@@ -251,10 +251,10 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
-                                        <h4 class="card-title">Google Map</h4>
+                                    <div class="col-md-12">
+                                        <h4 class="card-title">Google Map Link</h4>
                                         <div class="form-group">
-                                            <input name="google_link" type="text" class="form-control" />
+                                            <input name="google_link" type="text" class="form-control" value="{{ $contactus->google_link }}" />
                                         </div>
                                     </div>
 

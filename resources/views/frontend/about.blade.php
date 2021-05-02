@@ -77,63 +77,100 @@
         </div>
     </div>
 
+    
+
+    @php
+        $corporate_office = json_decode($contactus->corporate_office);
+        $training_center1 = json_decode($contactus->training_center1);
+        $training_center2 = json_decode($contactus->training_center2);
+    @endphp
+
+<!-- <div class="section pb_70">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="heading_s1 text-center">
+                    <h2 class="mb-2">Training Center</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-lg-3 col-md-3">
+                <div class="icon_box">
+                    <div class="icon_box_content">
+                        <h5>{{ $training_center1->tc1_name }} <span class="float-right">:</span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+                <div class="icon_box icon_box_style1">
+                    <div class="icon_box_content">
+                        <p class="text-left">{{ $training_center1->tc1_address }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-lg-3 col-md-3">
+                <div class="icon_box">
+                    <div class="icon_box_content">
+                        <h5>{{ $training_center2->tc2_name }} <span class="float-right">:</span></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+                <div class="icon_box icon_box_style1">
+                    <div class="icon_box_content">
+                        <p class="text-left">{{ $training_center2->tc2_address }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div> -->
+
     <div class="section pb_70">
         <div class="container">
             <div class="row">
                 <div class="col-xl-4 col-md-6">
-                @php
-                    $corporate_office = json_decode($contactus->corporate_office);
-                @endphp
                     <div class="contact_wrap contact_style3">
                         <div class="contact_icon">
                             <i class="linearicons-map2"></i>
                         </div>
                         <div class="contact_text">
-                            <span>{{ $corporate_office->c_name }}</span>
-                            <p class="mb-1"><i class="linearicons-location mr-2"></i>{{ $corporate_office->c_address }}</p>
-                            <p style="margin: 0px;"><i class="linearicons-telephone mr-2"></i>{{ $corporate_office->c_phone }}</p>
-                            <p style="margin: 0px;"><i class="linearicons-telephone mr-2"></i>{{ $corporate_office->c_cell1 }}</p>
-                            <p style="margin: 0px;"><i class="linearicons-telephone mr-2"></i>{{ $corporate_office->c_cell2 }}</p>
-                            <p style="margin: 0px;"><i class="linearicons-envelope-open mr-2"></i>{{ $corporate_office->c_email1 }}</p>
-                            <p style="margin: 0px;"><i class="linearicons-envelope-open mr-2"></i>{{ $corporate_office->c_email2 }}</p>
+                            <span style="font-family: beaufort !important;" class="text-uppercase">{{ $corporate_office->c_name }}</span>
+                            <p>{{ $corporate_office->c_address }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-6">
-                @php
-                    $training_center1 = json_decode($contactus->training_center1);
-                @endphp
                     <div class="contact_wrap contact_style3">
                         <div class="contact_icon">
-                            <i class="linearicons-envelope-open"></i>
+                        <i class="linearicons-map2"></i>
                         </div>
                         <div class="contact_text">
-                            <span>{{ $training_center1->tc1_name }}</span>
-                            <p class="mb-1"><i class="linearicons-location mr-2"></i>{{ $training_center1->tc1_address }}</p>
-                            <p class="mb-1"><i class="linearicons-telephone mr-2"></i>{{ $training_center1->tc1_cell }}</p>
-                            <p><i class="linearicons-envelope-open mr-2"></i>{{ $training_center1->tc1_email }}</p>
+                            <span style="font-family: beaufort !important;" class="text-uppercase">{{ $training_center1->tc1_name }}</span>
+                            <p>{{ $training_center1->tc1_address }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-6">
-                @php
-                    $training_center2 = json_decode($contactus->training_center2);
-                @endphp
                     <div class="contact_wrap contact_style3">
                         <div class="contact_icon">
-                            <i class="linearicons-tablet2"></i>
+                        <i class="linearicons-map2"></i>
                         </div>
                         <div class="contact_text">
-                            <span>{{ $training_center1->tc1_name }}</span>
-                            <p class="mb-1"><i class="linearicons-location mr-2"></i>{{ $training_center2->tc2_address }}</p>
-                            <p class="mb-1"><i class="linearicons-telephone mr-2"></i>{{ $training_center2->tc2_cell }}</p>
-                            <p><i class="linearicons-envelope-open mr-2"></i>{{ $training_center2->tc2_email }}</p>
+                            <span style="font-family: beaufort !important;" class="text-uppercase">{{ $training_center2->tc2_name }}</span>
+                            <p>{{ $training_center2->tc2_address }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 </div>

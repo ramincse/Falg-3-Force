@@ -206,7 +206,8 @@
                     $('#update_fsservice_modal form input[name="id"]').val(data.id);
                     $('#update_fsservice_modal form input[name="title"]').val(data.title);
                     $('#update_fsservice_modal form input[name="sub_title"]').val(data.sub_title);
-                    $('#update_fsservice_modal form textarea[name="content"]').text(data.content);
+                    $('#update_fsservice_modal form textarea[name="content_1"]').text(data.content_1);
+                    $('#update_fsservice_modal form textarea[name="content_2"]').text(data.content_2);
                     $('#update_fsservice_modal img#fsservice_new_photo_load').attr('src', 'media/fsservice/' + data.photo);
                     $('#update_fsservice_modal form input[name="photo_name"]').val(data.photo_name);
                     $('#update_fsservice_modal').modal('show');
