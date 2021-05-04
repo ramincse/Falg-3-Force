@@ -106,13 +106,13 @@
             $cont_josn = json_decode($fsservices->content);
             @endphp
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <div class="single_banner mb-0">
                         <p class="text-justify">{{ $cont_josn->content_1 }}</p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="single_banner">
+                <div class="col-md-3">
+                    <div class="single_banner mb-1 text-right">
                         <img style="width: 250px; height: 250px;" src="{{ URL::to('/') }}/media/fsservice/{{ $fsservices->photo }}" alt="furniture_banner1">
                     </div>
                 </div>

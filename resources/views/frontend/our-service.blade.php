@@ -9,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
                     <div class="text-center">
-                        <h2 class="mb-4">{{ $top_service->title }}</h2>
+                        <h2 style="font-size: 24px;" class="mb-4">{{ $top_service->title }}</h2>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="heading_s1 text-center">
-                    <h2>Services Accessories</h2>
+                    <h2 style="font-size: 24px;">Services Accessories</h2>
                 </div>
             </div>
         </div>

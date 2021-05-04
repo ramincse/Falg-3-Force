@@ -40,7 +40,9 @@
                         </div>
                         <div class="contact_text">
                             <span style="font-family: beaufort !important;" class="text-uppercase">{{ $dhaka1_office->d1_name }}</span>
-                            <p><i class="linearicons-location mr-2"></i>{{ $dhaka1_office->d1_address }}</p>
+                            <p class="mb-0"><i class="linearicons-location mr-2"></i>{{ $dhaka1_office->d1_address }}</p>
+                            <p style="margin: 0px;"><i class="linearicons-telephone mr-2"></i>{{ $dhaka1_office->d1_cell1 }}</p>
+                            <p style="margin: 0px;"><i class="linearicons-envelope-open mr-2"></i>{{ $dhaka1_office->d1_email1 }}</p>
                         </div>
                     </div>
                 </div>
@@ -108,13 +110,13 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="heading_s1">
-                    <h2 class="text-center">Get In touch</h2>
+                    <h2 style="font-size: 22px;" class="text-center">Get In touch</h2>
                 </div>
             </div>
         </div>
     	<div class="row">
         	<div class="col-lg-6">
-                <p class="leads">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit massa enim. Nullam id varius nunc id varius nunc.</p>
+                <h4 style="font-size: 20px;" class="leads text-uppercase">Please get instant feedback</h4>
                 <div class="field_form">
                     <form method="post" name="enq">
                         <div class="row">
