@@ -554,6 +554,47 @@
             let file_url = URL.createObjectURL(e.target.files[0]);
             $('img#favicon_photo_load').attr('src', file_url);
          });
+        
+        /**
+         * Accessories Image Load
+         */
+        $(document).on('change', '#accessory_photo', function (e) {
+            e.preventDefault();
+            let file_url = URL.createObjectURL(e.target.files[0]);
+            $('img#accessory_photo_load').attr('src', file_url);
+        });
+        
+        /**
+         * Accessories Edit
+         */
+         $(document).on('click', '.edit_accessory', function (e) {
+            e.preventDefault();
+            let edit_id = $(this).attr('edit_id');
+
+            $.ajax({
+                url: 'accessory/' + edit_id + '/edit',
+                success: function (data) {
+                    $('#update_accessory_modal form input[name="id"]').val(data.id);
+                    $('#update_accessory_modal form input[name="name"]').val(data.name);
+                    $('#update_accessory_modal img#accessory_new_photo_load').attr('src', 'media/accessories/' + data.photo);
+                    $('#update_accessory_modal').modal('show');
+                }
+            });
+         });
+        
+        /**
+        * Accessories Switcher
+        */
+         $(document).on('change', '.accessory_switcher', function (e) {
+            e.preventDefault();
+            let status_id = $(this).attr('status_id');
+            $.ajax({
+                url: '/accessory-status-update/' + status_id,
+                success: function (data) {
+                    swal('Accessories status updated Successfull!');
+                }
+            });
+         });
 
     });
 })(jQuery)

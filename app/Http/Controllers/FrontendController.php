@@ -13,6 +13,7 @@ use App\Models\OurService;
 use App\Models\Testimonial;
 use App\Models\ContactUs;
 use App\Models\TopManagement;
+use App\Models\Accessory;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -64,9 +65,11 @@ class FrontendController extends Controller
     public function showOurServicePage()
     {
         
-        $top_service    = OurService::find(1);
+        $top_service = OurService::find(1);
+        $accessory_data    = Accessory::all();
         return view('frontend.our-service', [
             'top_service'       => $top_service,
+            'accessory_data'    => $accessory_data,
         ]);
     }
 

@@ -4146,3 +4146,6 @@ table.table-inbox tbody tr.checked {
 
 /*= = = = = = Flag 3 Force = = = = = =*/
 tr td{ vertical-align: middle !important;}
+
+#add_accessory_modal .checkbox label, #update_accessory_modal .checkbox label {font-size: 14px;}
+#add_accessory_modal .checkbox label input, #update_accessory_modal .checkbox label input{margin-right: 5px;}

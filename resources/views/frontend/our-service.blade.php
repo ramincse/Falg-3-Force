@@ -47,7 +47,7 @@
 
 
     <!-- Services Accessories -->
-<div class="section small_pb small_pt amader-product">
+<!-- <div class="section small_pb small_pt amader-product">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -63,17 +63,17 @@
                         <li class="nav-item"><a data-filter="all" class="nav-link" href="#">All</a></li>
                         <a><button class="white-border filter" data-filter=".a">A</button></a>
                         <!-- <li class="nav-item"><a data-filter=".a" class="nav-link" href="#">A</a></li> -->
-                        <li class="nav-item"><a data-filter=".b" class="nav-link" href="#">B</a></li>
+                        <!-- <li class="nav-item"><a data-filter=".b" class="nav-link" href="#">B</a></li>
                         <li class="nav-item"><a data-filter=".c" class="nav-link" href="#">C</a></li>
                         <li class="nav-item"><a data-filter="none" class="nav-link" href="#">None</a></li>
                     </ul>
                 </div>            
             </div>
-        </div>
+        </div> -->
 
         
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-4">
                 <div class="p-box mix a">
                     <div class="sale-banner mb-3 mb-md-4">
@@ -82,8 +82,8 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <!-- <div class="col-md-4">
             <div class="p-box mix b">
                 <div class="sale-banner mb-3 mb-md-4">
                     <a class="hover_effect1" href="#">
@@ -109,8 +109,8 @@
                     </a>
                 </div>
                 </div>
-            </div>
-            <div class="col-md-4">
+            </div> -->
+            <!-- <div class="col-md-4">
             <div class="p-box mix b">
                 <div class="sale-banner mb-3 mb-md-4">
                     <a class="hover_effect1" href="#">
@@ -130,9 +130,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<!-- <div class="section">
+<div class="section">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -146,160 +146,115 @@
                 <div class="tab-style1">
                     <ul class="nav nav-tabs justify-content-center" id="nav" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" id="arrival-tab" data-toggle="tab" href="#Car_and_Traffic" role="tab" aria-controls="arrival" aria-selected="true">Car &amp; Traffic</a>
+                            <a class="nav-link active" id="arrival-tab" data-toggle="tab" href="#security_access" role="tab" aria-controls="arrival" aria-selected="true">Security Accessories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#CCTV" role="tab" aria-controls="arrival" aria-selected="false">CCTV</a>
+                            <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#pest_control" role="tab" aria-controls="arrival" aria-selected="false">Pest Control</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#Entry_Exit_Check" role="tab" aria-controls="arrival" aria-selected="false">Entry Exit Check</a>
+                            <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#cleaning_access" role="tab" aria-controls="arrival" aria-selected="false">Cleaning Accessories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#fire_fight_equip" role="tab" aria-controls="arrival" aria-selected="false">Fire Fighting Equipment</a>
                         </li>
                     </ul>
                 </div>
                 <div class="tab-content" id="tab">
-                    <div class="tab-pane fade active show" id="Car_and_Traffic" role="tabpanel" aria-labelledby="arrival-tab">
-                        <div class="row shop_container">
+                    <div class="tab-pane fade active show" id="security_access" role="tabpanel" aria-labelledby="arrival-tab">
+                        <div class="row shop_container">                       
+
+                            @foreach($accessory_data as $accessories_data)
+                            @php
+                                $cat_id = json_decode($accessories_data->cat_id);
+                            @endphp
+                            
+                            @if( in_array('security_access', $cat_id) )
                             <div class="col-lg-3 col-md-4 col-6">
                                 <div class="product">
                                     <div class="product_img">
                                         <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187240590.jpg" alt="product_img1" />
+                                            <img src="{{ URL::to('/') }}/media/accessories/{{ $accessories_data->photo }}" />
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187240601.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187240602.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187240603.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187240604.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187240605.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187240606.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187240607.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endif
+                            @endforeach
+
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="CCTV" role="tabpanel" aria-labelledby="arrival-tab">
+
+                    <div class="tab-pane fade" id="pest_control" role="tabpanel" aria-labelledby="arrival-tab">
                         <div class="row shop_container">
+                        @foreach($accessory_data as $accessories_data)
+                            @php
+                                $cat_id = json_decode($accessories_data->cat_id);
+                            @endphp
+                            @if( in_array('pest_control', $cat_id) )
                             <div class="col-lg-3 col-md-4 col-6">
                                 <div class="product">
                                     <div class="product_img">
                                         <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187334420.jpg" alt="product_img1" />
+                                        <img src="{{ URL::to('/') }}/media/accessories/{{ $accessories_data->photo }}" />
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187342680.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187343770.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endif
+                        @endforeach
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="Entry_Exit_Check" role="tabpanel" aria-labelledby="arrival-tab">
+ 
+                    <div class="tab-pane fade" id="cleaning_access" role="tabpanel" aria-labelledby="arrival-tab">
                         <div class="row shop_container">
+                        @foreach($accessory_data as $accessories_data)
+                            @php
+                                $cat_id = json_decode($accessories_data->cat_id);
+                            @endphp
+                            @if( in_array('cleaning_access', $cat_id) )
                             <div class="col-lg-3 col-md-4 col-6">
                                 <div class="product">
                                     <div class="product_img">
                                         <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187350530.jpg" alt="product_img1" />
+                                        <img src="{{ URL::to('/') }}/media/accessories/{{ $accessories_data->photo }}" />
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187350531.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4 col-6">
-                                <div class="product">
-                                    <div class="product_img">
-                                        <a href="javascript: void (0)">
-                                            <img src="http://flag.bankersclubbd.com/image/galleries/16187350542.jpg" alt="product_img1" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            @endif
+                        @endforeach
+                            
                         </div>
                     </div>
+
+                    <div class="tab-pane fade" id="fire_fight_equip" role="tabpanel" aria-labelledby="arrival-tab">
+                        <div class="row shop_container">
+                        @foreach($accessory_data as $accessories_data)
+                            @php
+                                $cat_id = json_decode($accessories_data->cat_id);
+                            @endphp
+                            @if( in_array('fire_fight_equip', $cat_id) )
+                            <div class="col-lg-3 col-md-4 col-6">
+                                <div class="product">
+                                    <div class="product_img">
+                                        <a href="javascript: void (0)">
+                                            <img src="{{ URL::to('/') }}/media/accessories/{{ $accessories_data->photo }}" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
+                        @endforeach
+                            
+                        </div>
+                    </div>
+
                 </div>
+                <!-- tab-content -->
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 
 
