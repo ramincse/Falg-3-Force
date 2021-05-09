@@ -583,6 +583,15 @@
          });
         
         /**
+         * Accessories Uploaded Image Load
+         */
+         $(document).on('change', '#accessory_new_photo', function (e) {
+            e.preventDefault();
+            let file_url = URL.createObjectURL(e.target.files[0]);
+            $('img#accessory_new_photo_load').attr('src', file_url);
+        });
+        
+        /**
         * Accessories Switcher
         */
          $(document).on('change', '.accessory_switcher', function (e) {

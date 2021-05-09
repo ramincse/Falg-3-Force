@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="page-title">
-                    <h1>@yield('page-title', 'About Us')</h1>
+                    <h1 style="color: #FFFF63;">@yield('page-title', 'About Us')</h1>
                 </div>
             </div>
         </div>

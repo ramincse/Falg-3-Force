@@ -6,7 +6,7 @@
         <div class="container">
             <div class="loginbox">
                 <div class="login-left">
-                    <img class="img-fluid" src="{{ URL::to('/') }}/admin/assets/img/logo-white.png" alt="Logo">
+                    <img class="img-fluid" src="{{ URL::to('/') }}/media/logo/flag_3_force_logo.png" alt="Logo">
                 </div>
                 <div class="login-right">
                     <div class="login-right-wrap">

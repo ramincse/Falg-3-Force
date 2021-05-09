@@ -24,8 +24,8 @@ Route::get('/admin/login', [App\Http\Controllers\AdminController::class, 'showAd
 Route::post('/admin/login', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('admin.login');
 
 //Admin Register
-Route::get('/register', [App\Http\Controllers\AdminController::class, 'showAdminRegisterForm'])->name('admin.register');
-Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('admin.register');
+Route::get('/admin/register', [App\Http\Controllers\AdminController::class, 'showAdminRegisterForm'])->name('admin.register');
+Route::post('/admin/register', [App\Http\Controllers\Auth\RegisterController::class, 'register'])->name('admin.register');
 
 //Admin LogOut
 Route::post('/admin/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('admin.logout');

@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('page-title', 'Our Service')
+@section('page-title', 'Our Services')
 @section('main-content')
 <!-- END MAIN CONTENT -->
 <div class="main_content">
@@ -44,93 +44,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- Services Accessories -->
-<!-- <div class="section small_pb small_pt amader-product">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="heading_s1 text-center">
-                    <h2 style="font-size: 24px;">Services Accessories</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="gall-menu">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item"><a data-filter="all" class="nav-link" href="#">All</a></li>
-                        <a><button class="white-border filter" data-filter=".a">A</button></a>
-                        <!-- <li class="nav-item"><a data-filter=".a" class="nav-link" href="#">A</a></li> -->
-                        <!-- <li class="nav-item"><a data-filter=".b" class="nav-link" href="#">B</a></li>
-                        <li class="nav-item"><a data-filter=".c" class="nav-link" href="#">C</a></li>
-                        <li class="nav-item"><a data-filter="none" class="nav-link" href="#">None</a></li>
-                    </ul>
-                </div>            
-            </div>
-        </div> -->
-
-        
-
-        <!-- <div class="row">
-            <div class="col-md-4">
-                <div class="p-box mix a">
-                    <div class="sale-banner mb-3 mb-md-4">
-                        <a class="hover_effect1" href="#">
-                            <img src="{{ URL::to('/') }}/frontend/assets/images/shop_banner_img1.jpg" alt="shop_banner_img7" />
-                        </a>
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="col-md-4">
-            <div class="p-box mix b">
-                <div class="sale-banner mb-3 mb-md-4">
-                    <a class="hover_effect1" href="#">
-                        <img src="{{ URL::to('/') }}/frontend/assets/images/shop_banner_img2.jpg" alt="shop_banner_img8" />
-                    </a>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-            <div class="p-box mix c">
-                <div class="sale-banner mb-3 mb-md-4">
-                    <a class="hover_effect1" href="#">
-                        <img src="{{ URL::to('/') }}/frontend/assets/images/shop_banner_img3.jpg" alt="shop_banner_img9" />
-                    </a>
-                </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-            <div class="p-box mix a">
-                <div class="sale-banner mb-3 mb-md-4">
-                    <a class="hover_effect1" href="#">
-                        <img src="{{ URL::to('/') }}/frontend/assets/images/shop_banner_img4.jpg" alt="shop_banner_img7" />
-                    </a>
-                </div>
-                </div>
-            </div> -->
-            <!-- <div class="col-md-4">
-            <div class="p-box mix b">
-                <div class="sale-banner mb-3 mb-md-4">
-                    <a class="hover_effect1" href="#">
-                        <img src="{{ URL::to('/') }}/frontend/assets/images/shop_banner_img5.jpg" alt="shop_banner_img8" />
-                    </a>
-                </div>
-            </div>
-            </div>
-            <div class="col-md-4">
-                <div class="p-box mix c">
-                    <div class="sale-banner mb-3 mb-md-4">
-                        <a class="hover_effect1" href="#">
-                            <img src="{{ URL::to('/') }}/frontend/assets/images/shop_banner_img1.jpg" alt="shop_banner_img9" />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <div class="section">
     <div class="container">
