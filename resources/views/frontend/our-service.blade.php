@@ -36,7 +36,7 @@
                 <div class="col-md-6">
                     <div class="sale_banner">
                         <a class="hover_effect1" href="#">
-                            <img style="width: 100%; height: 200px;" src="{{ URL::to('/') }}/media/our_service/{{ $photo }}" alt="" />
+                            <img style="width: 100%; height: 250px;" src="{{ URL::to('/') }}/media/our_service/{{ $photo }}" alt="" />
                         </a>
                     </div>
                 </div>            

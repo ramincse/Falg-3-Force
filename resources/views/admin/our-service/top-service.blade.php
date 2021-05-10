@@ -99,27 +99,7 @@
                                             <label for="topser_piture6"><img style="width: 60px; height: 60px; cursor: pointer;" src="{{ URL::to('/') }}/admin/icons/camera.jpg" alt=""></label>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Picture-07</label>
-                                            <img style="width: 100%; height: 150px; border: 1px solid #ccc; border-radius: 4px; display: block;" src="{{ URL::to('/') }}/media/our_service/{{$service_photo->photo7}}" alt="" id="topser_piture7_load">
-                                            <input style="display: none;" id="topser_piture7" name="photo7" class="form-control" type="file">
-                                            <label for="topser_piture7"><img style="width: 60px; height: 60px; cursor: pointer;" src="{{ URL::to('/') }}/admin/icons/camera.jpg" alt=""></label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Picture-08</label>
-                                            <img style="width: 100%; height: 150px; border: 1px solid #ccc; border-radius: 4px; display: block;" src="{{ URL::to('/') }}/media/our_service/{{$service_photo->photo8}}" alt="" id="topser_piture8_load">
-                                            <input style="display: none;" id="topser_piture8" name="photo8" class="form-control" type="file">
-                                            <label for="topser_piture8"><img style="width: 60px; height: 60px; cursor: pointer;" src="{{ URL::to('/') }}/admin/icons/camera.jpg" alt=""></label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
+                                </div>                              
                                 <div class="text-right">
                                     <button type="submit" class="btn btn-primary">Save</button>
                                 </div>

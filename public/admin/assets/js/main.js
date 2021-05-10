@@ -426,16 +426,16 @@
             let file_url = URL.createObjectURL(e.target.files[0]);
             $('img#topser_piture4_load').attr('src', file_url);
         });
-        $(document).on('change', '#topser_piture7', function (e) {
-            e.preventDefault();
-            let file_url = URL.createObjectURL(e.target.files[0]);
-            $('img#topser_piture7_load').attr('src', file_url);
-        });
-        $(document).on('change', '#topser_piture8', function (e) {
-            e.preventDefault();
-            let file_url = URL.createObjectURL(e.target.files[0]);
-            $('img#topser_piture8_load').attr('src', file_url);
-        });
+        // $(document).on('change', '#topser_piture7', function (e) {
+        //     e.preventDefault();
+        //     let file_url = URL.createObjectURL(e.target.files[0]);
+        //     $('img#topser_piture7_load').attr('src', file_url);
+        // });
+        // $(document).on('change', '#topser_piture8', function (e) {
+        //     e.preventDefault();
+        //     let file_url = URL.createObjectURL(e.target.files[0]);
+        //     $('img#topser_piture8_load').attr('src', file_url);
+        // });
 
 
         /**
