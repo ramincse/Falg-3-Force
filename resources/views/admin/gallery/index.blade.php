@@ -80,7 +80,7 @@
 
 <!-- Add Gallery Modal -->
 <div id="add_gallery_modal" class="modal fade">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Add new gallery</h4>
@@ -102,6 +102,38 @@
                     </div>
 
                     <div class="form-group">
+                        <label style="display:block;">Gallery Category</label>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="cleaning" />Cleaning</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="digital" />Digital</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="fire_fighting" />Fire Fighting</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="pest_control" />Pest Control</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="physical_security" />Physical Security</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
                         <input class="btn btn-block btn-info" type="submit" value="Add Gallery">
                     </div>
                 </form>
@@ -112,7 +144,7 @@
 
 <!-- Update Gallery Modal -->
 <div id="update_gallery_modal" class="modal fade">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Update Gallery</h4>
@@ -133,6 +165,38 @@
                         <img style="width: 100%; height: 150px; border: 1px solid #ccc; border-radius: 4px; display: block;" src="" alt="" id="gallery_new_photo_load">
                         <input style="display: none;" id="gallery_new_photo" name="new_photo" class="form-control" type="file">
                         <label for="gallery_new_photo"><img style="width: 60px; height: 60px; cursor: pointer;" src="{{ URL::to('/') }}/admin/icons/camera.jpg" alt=""></label>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display:block;">Gallery Category</label>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="cleaning" />Cleaning</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="digital" />Digital</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="fire_fighting" />Fire Fighting</label>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="pest_control" />Pest Control</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="gall_cat[]" value="physical_security" />Physical Security</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group">

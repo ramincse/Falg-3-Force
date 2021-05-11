@@ -40,6 +40,8 @@ class GalleryController extends Controller
             'title' => 'required',
         ]);
 
+        $gall_cat_json = json_encode($request->gall_cat);
+
         if ($request->hasFile('photo')) {
             $img = $request->file('photo');
             $photo_uname = md5(time() . rand()) . '.' . $img->getClientOriginalExtension();
@@ -49,6 +51,7 @@ class GalleryController extends Controller
         Gallery::create([
             'title' => $request->title,
             'photo' => $photo_uname,
+            'gall_cat'   => $gall_cat_json,
         ]);
 
         return redirect()->route('gallery.index')->with('success', 'Gallery Added Successfull!');
@@ -101,8 +104,11 @@ class GalleryController extends Controller
             $photo_uname = $update_data->photo;
         }
 
-        $update_data->title = $request->title;
-        $update_data->photo = $photo_uname;
+        $gall_cat_json = json_encode($request->gall_cat);
+
+        $update_data->title     = $request->title;
+        $update_data->photo     = $photo_uname;
+        $update_data->gall_cat  = $gall_cat_json;
         $update_data->update();
 
         return redirect()->route('gallery.index')->with('success', 'Gallery updated successfull!');

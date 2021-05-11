@@ -4149,3 +4149,6 @@ tr td{ vertical-align: middle !important;}
 
 #add_accessory_modal .checkbox label, #update_accessory_modal .checkbox label {font-size: 14px;}
 #add_accessory_modal .checkbox label input, #update_accessory_modal .checkbox label input{margin-right: 5px;}
+
+#add_gallery_modal .checkbox label, #update_gallery_modal .checkbox label {font-size: 14px;}
+#add_gallery_modal .checkbox label input, #update_gallery_modal .checkbox label input{margin-right: 5px;}

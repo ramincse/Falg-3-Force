@@ -53,9 +53,11 @@ class FrontendController extends Controller
      */
     public function showGalleryPage()
     {
-        $all_gallery    = Gallery::all();
+        //$accessory_data    = Accessory::all();
+        $gallery_data    = Gallery::all();
         return view('frontend.gallery', [
-            'all_gallery'       => $all_gallery,
+            'gallery_data'       => $gallery_data,
+            //'accessory_data'    => $accessory_data,
         ]);
     }
 
