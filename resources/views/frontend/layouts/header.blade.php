@@ -27,7 +27,7 @@
                 $hotline_arr = json_decode($all_settings->hotline);
                 @endphp  
                     <div>
-                        <h6 class="m-0" style="font-size: 14px; color: #333; text-transform: uppercase; text-align: center;">Hotline:</h4>
+                        <h6 class="m-0" style="font-size: 14px; color: #FF324D; text-transform: uppercase; text-align: center;">Hotline:</h4>
                         <p class="mb-0" style="line-height: 18px;"><i style="margin-right: 6px; font-size: 14px; color: #333;" class="fas fa-headset"></i><span style="font-size: 14px; color: #333;">{{ $hotline_arr->cell_1 }}</span></p>
                         <hr style="background: #333;" class="m-0">
                         <p class="mb-0" style="line-height: 18px;"><i style="margin-right: 6px; font-size: 14px; color: #333;" class="fas fa-headset"></i><span style="font-size: 14px; color: #333;">{{ $hotline_arr->cell_2 }}</span></p>

@@ -9,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
                     <div class="heading_s1 text-center">
-                        <h2 class="mb-5">Top Management</h2>
+                        <h2 style="text-transform: uppercase;" class="mb-5">Top Management</h2>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                             <img class="rounded" style="width: 165px; height: 190px;" src="{{ URL::to('/') }}/media/top_management/{{ $management->photo }}" alt="">
                         </div>
                         <div class="icon_box_content">
-                            <h5 style="height: 48px;">{{ $management->name }}</h5>
+                            <h5 style="font-size: 25px;">{{ $management->name }}</h5>
                             <p>{{ $management->job }}</p>
                         </div>
                     </div>
@@ -38,7 +38,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="text-center">
-                        <h2 class="mb-5">{{ $message->name }}</h2>
+                        <h2 style="text-transform: uppercase;">Message</h2>
+                        <h2 style="text-transform: uppercase; letter-spacing: 1.5px;" class="mb-5">{{ $message->name }}</h2>
                     </div>
                 </div>
             </div>
@@ -61,7 +62,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="heading_s1 text-center">
-                        <h2 class="mb-2">{{ $abouttext->title }}</h2>
+                        <h2 style="text-transform: uppercase;" class="mb-2">{{ $abouttext->title }}</h2>
                     </div>
                 </div>
             </div>
@@ -84,52 +85,6 @@
         $training_center1 = json_decode($contactus->training_center1);
         $training_center2 = json_decode($contactus->training_center2);
     @endphp
-
-<!-- <div class="section pb_70">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="heading_s1 text-center">
-                    <h2 class="mb-2">Training Center</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-lg-3 col-md-3">
-                <div class="icon_box">
-                    <div class="icon_box_content">
-                        <h5>{{ $training_center1->tc1_name }} <span class="float-right">:</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-9 col-md-9">
-                <div class="icon_box icon_box_style1">
-                    <div class="icon_box_content">
-                        <p class="text-left">{{ $training_center1->tc1_address }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row no-gutters">
-            <div class="col-lg-3 col-md-3">
-                <div class="icon_box">
-                    <div class="icon_box_content">
-                        <h5>{{ $training_center2->tc2_name }} <span class="float-right">:</span></h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-9 col-md-9">
-                <div class="icon_box icon_box_style1">
-                    <div class="icon_box_content">
-                        <p class="text-left">{{ $training_center2->tc2_address }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div> -->
 
     <div class="section pb_70">
         <div class="container">

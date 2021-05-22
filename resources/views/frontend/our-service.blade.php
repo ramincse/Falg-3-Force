@@ -9,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
                     <div class="text-center">
-                        <h2 style="font-size: 24px;" class="mb-4">{{ $top_service->title }}</h2>
+                        <h2 style="font-size: 24px; text-transform: uppercase;" class="mb-4">{{ $top_service->title }}</h2>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="heading_s1 text-center">
-                    <h2>Services Accessories</h2>
+                    <h2 style="text-transform: uppercase;">Services Accessories</h2>
                 </div>
             </div>
         </div>
@@ -60,12 +60,12 @@
                     <ul class="nav nav-tabs justify-content-center" id="nav" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="arrival-tab" data-toggle="tab" href="#security_access" role="tab" aria-controls="arrival" aria-selected="true">Security Accessories</a>
+                        </li>                        
+                        <li class="nav-item">
+                            <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#cleaning_access" role="tab" aria-controls="arrival" aria-selected="false">Cleaning Accessories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#pest_control" role="tab" aria-controls="arrival" aria-selected="false">Pest Control</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#cleaning_access" role="tab" aria-controls="arrival" aria-selected="false">Cleaning Accessories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#fire_fight_equip" role="tab" aria-controls="arrival" aria-selected="false">Fire Fighting Equipment</a>

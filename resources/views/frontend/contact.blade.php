@@ -3,7 +3,19 @@
 @section('main-content')
 <!-- END MAIN CONTENT -->
 <div class="main_content">
-    <div class="section pb_70">
+    <div class="section bg_light_blue2 pb_70">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-md-12">
+                    <div class="text-center trading_img">
+                        <img style="width: 100%;" src="{{ URL::to('/') }}/media/contact/{{ $contactus->top_img }}" alt="tranding_img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section pt-5 pb-5">
         <div class="container">
         <!-- Corporate Office -->
         <div class="row">
@@ -105,12 +117,12 @@
     </div>
 
     <!-- Google Maps-->
-    <div class="section pt-0">
+    <div class="section bg_light_blue2">
 	<div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="heading_s1">
-                    <h2 style="font-size: 22px;" class="text-center">Get In touch</h2>
+                    <h2 style="font-size: 22px; text-transform: uppercase;" class="text-center">Get In touch</h2>
                 </div>
             </div>
         </div>

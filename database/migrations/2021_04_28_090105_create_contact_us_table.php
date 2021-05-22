@@ -22,6 +22,7 @@ class CreateContactUsTable extends Migration
             $table->longText('training_center2')->nullable();
             $table->longText('open_time')->nullable();
             $table->string('google_link')->nullable();
+            $table->string('top_img')->nullable();
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="heading_s1 text-center">
-                        <h2>Our Gallery</h2>
+                        <h2 style="text-transform: uppercase;">Our Gallery</h2>
                     </div>
                 </div>
             </div>
@@ -18,24 +18,24 @@
                     <div class="tab-style1">
                         <ul class="nav nav-tabs justify-content-center" id="nav" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="arrival-tab" data-toggle="tab" href="#cleaning" role="tab" aria-controls="arrival" aria-selected="true">Cleaning</a>
+                                <a class="nav-link active" id="arrival-tab" data-toggle="tab" href="#physical_security" role="tab" aria-controls="arrival" aria-selected="false">Physical Security</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#digital" role="tab" aria-controls="arrival" aria-selected="false">Digital Security</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#fire_fighting" role="tab" aria-controls="arrival" aria-selected="false">Fire Fighting</a>
+                                <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#cleaning" role="tab" aria-controls="arrival" aria-selected="true">Cleaning</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#pest_control" role="tab" aria-controls="arrival" aria-selected="false">Pest Control</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#physical_security" role="tab" aria-controls="arrival" aria-selected="false">Physical Security</a>
-                            </li>
+                                <a class="nav-link" id="arrival-tab" data-toggle="tab" href="#fire_fighting" role="tab" aria-controls="arrival" aria-selected="false">Fire Fighting</a>
+                            </li>                                                        
                         </ul>
                     </div>
                     <div class="tab-content" id="tab">
-                        <div class="tab-pane fade active show" id="cleaning" role="tabpanel" aria-labelledby="arrival-tab">
+                        <div class="tab-pane fade" id="cleaning" role="tabpanel" aria-labelledby="arrival-tab">
                             <div class="row shop_container">                       
 
                                 @foreach($gallery_data as $gall_data)
@@ -124,7 +124,7 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="physical_security" role="tabpanel" aria-labelledby="arrival-tab">
+                        <div class="tab-pane fade active show" id="physical_security" role="tabpanel" aria-labelledby="arrival-tab">
                             <div class="row shop_container">
                             @foreach($gallery_data as $gall_data)
                                 @php

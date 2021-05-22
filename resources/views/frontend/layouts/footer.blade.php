@@ -8,7 +8,7 @@
                 @endphp
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="widget">
-                        <h6 class="widget_title">{{ $corporate_office->c_name }}</h6>
+                        <h6 style="text-transform: uppercase;" class="widget_title">{{ $corporate_office->c_name }}</h6>
                         <ul class="contact_info contact_info_light">
                             <li>
                                 <i class="ti-location-pin"></i>
@@ -47,7 +47,7 @@
                     $dhaka2_office = json_decode($contactus->dhaka2_office);
                 @endphp
                     <div class="widget">
-                        <h6 class="widget_title mb-1">{{ $dhaka1_office->d1_name }}</h6>
+                        <h6 style="text-transform: uppercase;" class="widget_title mb-1">{{ $dhaka1_office->d1_name }}</h6>
                         <ul class="contact_info contact_info_light">
                             <li>
                                 <i class="ti-location-pin"></i>
@@ -55,7 +55,7 @@
                             </li>                          
                         </ul>
 
-                        <h6 class="widget_title mb-1 mt-2">{{ $dhaka2_office->d2_name }}</h6>
+                        <h6 style="text-transform: uppercase;" class="widget_title mb-1 mt-2">{{ $dhaka2_office->d2_name }}</h6>
                         <ul class="contact_info contact_info_light">
                             <li>
                                 <i class="ti-location-pin"></i>
@@ -82,7 +82,7 @@
                 </div>
                 <div class="col-lg-2 col-md-6 col-sm-6">
                     <div class="widget">
-                        <h6 class="widget_title">Menu</h6>
+                        <h6 style="text-transform: uppercase;" class="widget_title">Menu</h6>
                         <ul class="widget_links">
                             <li><a class="text-uppercase" href="{{ route('home.page') }}">Home</a></li>
                             <li><a class="text-uppercase" href="{{ route('about.page') }}">About Us</a></li>
@@ -102,7 +102,7 @@
                 @endphp
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="widget">
-                        <h6 class="widget_title">{{ $sister_arr->sister }}</h6>                        
+                        <h6 style="text-transform: uppercase;" class="widget_title">{{ $sister_arr->sister }}</h6>                        
                         <h6 style="font-size: 16px;" class="widget_title mb-2 text-uppercase">Event Management</h6>
                         <!-- <p class="mb-2">{{ $sister_arr->event_manage }}</p> -->
                         <ul class="app_list">

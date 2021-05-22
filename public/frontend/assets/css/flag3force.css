@@ -3,7 +3,7 @@
     font-family: beaufort;
 }
 
-h1, h2, h3, h4, h5 ,h6{ font-family: beaufort !important; text-transform: uppercase !important;}
+h1, h2, h3, h4, h5 ,h6{ font-family: beaufort !important;}
 
 .navbar .navbar-nav li .nav-link { font-size: 16px !important;}
 

@@ -6,6 +6,13 @@
     <!-- START SECTION Clients -->
     <div class="section pb_20 small_pt">
         <div class="container px-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <div class="text-center">
+                        <h2 style="font-size: 24px; text-transform: uppercase;" class="mb-5">Featured Clients</h2>
+                    </div>
+                </div>
+            </div>
             <div class="row no-gutters">
                 @foreach($all_clients as $clients)
                 <div class="col-md-3">

@@ -75,6 +75,8 @@ Route::group(['middleware' => 'auth'], function(){
     //Contact Us
     Route::get('/contact', 'App\Http\Controllers\ContactUsController@showContactUS')->name('contact.us');
     Route::post('/contact', 'App\Http\Controllers\ContactUsController@insertContactUS')->name('contact.us');
+    Route::get('/contact/image', 'App\Http\Controllers\ContactUsController@showImage')->name('contact.image');
+    Route::post('/contact/image', 'App\Http\Controllers\ContactUsController@insertImage')->name('contact.image');
 
     //About Us
     Route::resource('/about-management', 'App\Http\Controllers\TopManagementController');

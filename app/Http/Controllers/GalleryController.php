@@ -99,7 +99,11 @@ class GalleryController extends Controller
             $img = $request->file('new_photo');
             $photo_uname = md5(time() . rand()) . '.' . $img->getClientOriginalExtension();
             $img->move(public_path('media/gallery'), $photo_uname);
-            unlink('media/gallery/' . $update_data->photo);
+
+            if (!empty($update_data->photo)) {
+                unlink('media/gallery/' . $update_data->photo);
+            }
+            
         } else {
             $photo_uname = $update_data->photo;
         }

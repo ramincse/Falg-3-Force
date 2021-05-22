@@ -82,4 +82,30 @@ class ContactUsController extends Controller
 
         return redirect()->route('contact.us')->with('success', 'Updeted successfull!');
     }
+
+    public function showImage()
+    {
+        $top_photo = ContactUs::find(1);
+        return view('admin.contact.top-image', compact('top_photo'));
+    }
+
+    public function insertImage(Request $request)
+    {
+        $topphoto_update = ContactUs::find(1);
+
+        if ($request->hasFile('photo')) {
+            $img = $request->file('photo');
+            $contop_uname = md5(time() . rand()) . '.' . $img->getClientOriginalExtension();
+            $img->move(public_path('media/contact'), $contop_uname);
+            if(!empty($topphoto_update->top_img)){
+                unlink('media/contact/' . $topphoto_update->top_img);
+            }
+        }else{
+            $contop_uname = $topphoto_update->top_img;
+        }
+
+        $topphoto_update->top_img = $contop_uname;
+        $topphoto_update->update();
+        return redirect()->route('contact.image')->with('success', 'Updeted successfull!');
+    }
 }

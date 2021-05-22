@@ -50,6 +50,7 @@
                     <li class="submenu">
                         <a href="#"><i class="fa fa-compress" aria-hidden="true"></i> <span>Contact</span> <span class="menu-arrow"></span></a>
                         <ul style="display: none;">
+                            <li class="{{ (Route::currentRouteName() == 'contact.image') ? 'ok' : '' }}"><a href="{{ route('contact.image') }}">Top Image</a></li>
                             <li class="{{ (Route::currentRouteName() == 'contact.us') ? 'ok' : '' }}"><a href="{{ route('contact.us') }}">Office Address</a></li>
                         </ul>
                     </li>
