@@ -9,7 +9,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-8">
                     <div class="heading_s1 text-center">
-                        <h2 style="text-transform: uppercase;" class="mb-5">Top Management</h2>
+                        <h2 style="text-transform: uppercase; font-weight: 500; font-size: 26px;" class="mb-5">Top Management</h2>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                             <img class="rounded" style="width: 165px; height: 190px;" src="{{ URL::to('/') }}/media/top_management/{{ $management->photo }}" alt="">
                         </div>
                         <div class="icon_box_content">
-                            <h5 style="font-size: 25px;">{{ $management->name }}</h5>
+                            <h5 style="font-size: 24px; text-transform: none; font-weight: 600;">{{ $management->name }}</h5>
                             <p>{{ $management->job }}</p>
                         </div>
                     </div>
