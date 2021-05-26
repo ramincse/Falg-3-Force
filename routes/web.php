@@ -103,3 +103,9 @@ Route::get('/our-service', 'App\Http\Controllers\FrontendController@showOurServi
 Route::get('/about-us', 'App\Http\Controllers\FrontendController@showAboutUsPage')->name('about.page');
 Route::get('/contact-us', 'App\Http\Controllers\FrontendController@showContactUsPage')->name('contact.page');
 
+
+
+Route::post('/test-mail', 'App\Http\Controllers\TestController@mailJao')->name('test.mail');
+
+
+
