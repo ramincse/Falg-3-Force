@@ -17,6 +17,6 @@ class TestController extends Controller
             'message'   => $request->message,
         ];
 
-        Mail::to('ramin.cse2009@gmail.com') -> send(new TestMail($mail_details));
+        Mail::to('flag3force@gmail.com') -> send(new TestMail($mail_details));
 	}
 }
